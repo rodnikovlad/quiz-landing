@@ -3,7 +3,6 @@ const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 
-// ===== ПУТИ =====
 const paths = {
     styles: {
         src: 'scss/**/*.scss',
@@ -14,11 +13,11 @@ const paths = {
         dest: './'
     },
     js: {
-        src: 'assets/js/**/*.js',
+        src: ['assets/js/**/*.js', 'js/**/*.js'],
         dest: 'assets/js/'
     },
     images: {
-        src: 'assets/images/**/*',
+        src: ['assets/images/**/*', 'img/**/*'],
         dest: 'assets/images/'
     },
     fonts: {
@@ -32,50 +31,42 @@ const paths = {
     dist: 'dist/'
 };
 
-// ===== SCSS =====
 function styles() {
     return src(paths.styles.src)
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(dest(paths.dist + paths.styles.dest));
 }
 
-// ===== HTML =====
 function html() {
     return src(paths.html.src)
         .pipe(dest(paths.dist));
 }
 
-// ===== JS =====
 function scripts() {
-    return src(paths.js.src)
+    return src(paths.js.src, { allowEmpty: true })
         .pipe(dest(paths.dist + paths.js.dest));
 }
 
-// ===== IMAGES =====
 function images() {
-    return src(paths.images.src)
+    return src(paths.images.src, { allowEmpty: true })
         .pipe(dest(paths.dist + paths.images.dest));
 }
 
-// ===== FONTS =====
 function fonts() {
-    return src(paths.fonts.src)
+    return src(paths.fonts.src, { allowEmpty: true })
         .pipe(dest(paths.dist + paths.fonts.dest));
 }
 
-// ===== LIBS (Swiper) =====
 function libs() {
-    return src(paths.libs.src, { base: '.' })
+    return src(paths.libs.src, { base: '.', allowEmpty: true })
         .pipe(dest(paths.dist));
 }
 
-// ===== CLEAN DIST =====
 function cleanDist() {
     return src(paths.dist, { read: false, allowEmpty: true })
-        .pipe(clean());
+        .pipe(clean({ force: true }));
 }
 
-// ===== DEV SERVER =====
 function serve() {
     browserSync.init({
         server: {
@@ -88,11 +79,9 @@ function serve() {
 
     watch('scss/**/*.scss', stylesDev);
     watch(paths.html.src).on('change', browserSync.reload);
-    watch(paths.js.src).on('change', browserSync.reload);
-    watch(paths.images.src).on('change', browserSync.reload);
+    watch(['assets/js/**/*.js', 'js/**/*.js']).on('change', browserSync.reload);
 }
 
-// ===== DEV STYLES =====
 function stylesDev() {
     return src(paths.styles.src)
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
@@ -100,7 +89,6 @@ function stylesDev() {
         .pipe(browserSync.stream());
 }
 
-// ===== TASKS =====
 exports.default = series(stylesDev, serve);
 exports.build = series(
     cleanDist,
