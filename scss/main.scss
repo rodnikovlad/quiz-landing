@@ -1,0 +1,37 @@
+@use 'base/reset';
+@use 'blocks/header';
+@use 'blocks/hero.scss';
+@use 'blocks/reactions';
+@use 'blocks/quiz';
+@use 'blocks/reviews';
+@use 'blocks/footer';
+@use 'blocks/contact';
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('/assets/fonts/NeueMachina/PPNeueMachina-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/assets/fonts/Raleway/Raleway-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.content-container {
+    width: 100%;
+    
+    @media (min-width: 1440px) {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+.hero__btn:hover {
+    background-color: #9E00FF;
+}
