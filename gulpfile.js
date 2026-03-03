@@ -9,6 +9,7 @@ const paths = {
     html: '*.html',
     js: 'assets/js/**/*.js',
     images: 'assets/images/**/*',
+    fonts: 'assets/fonts/**/*',
     dist: 'dist/'
 };
 
@@ -35,6 +36,12 @@ function scripts() {
 function images() {
     return src(paths.images)
         .pipe(dest(paths.dist + 'assets/images'));
+}
+
+// ===== FONTS =====
+function fonts() {
+    return src(paths.fonts)
+        .pipe(dest(paths.dist + 'assets/fonts'));
 }
 
 // ===== CLEAN DIST =====
@@ -68,5 +75,5 @@ function stylesDev() {
 exports.default = series(stylesDev, serve);
 exports.build = series(
     cleanDist,
-    parallel(styles, html, scripts, images)
+    parallel(styles, html, scripts, images, fonts)
 );

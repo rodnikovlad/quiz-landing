@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Project Structure</title>
-    <link rel="stylesheet" href="/libs/swiper-12.1.2/package/swiper-bundle.min.css">
+    <link rel="stylesheet" href="libs/swiper-12.1.2/package/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -14,17 +16,22 @@
                 <div class="header__logo">
                     Super Quiz
                 </div>
+
                 <button class="header__mobile-button" aria-label="Меню">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
+
                 <nav class="header__nav-desktop">
                     <a href="#home" class="header__link">Главная</a>
                     <a href="#quiz" class="header__link">Квиз</a>
                     <a href="#reviews" class="header__link">Отзывы</a>
+
                     <div class="header__link--dropdown-container">
-                        <a href="#other" class="header__link header__link--dropdown">Не главная</a>
+                        <a href="#other" class="header__link header__link--dropdown">
+                            Не главная
+                        </a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Подпункт</a>
                             <a href="#" class="dropdown-item">Еще подпункт</a>
@@ -32,17 +39,21 @@
                         </div>
                     </div>
                 </nav>
+
                 <div class="header__actions">
-                    <a href="#contact" class="header__btn">Связаться с нами</a>
+                    <a href="#contact" class="header__btn">
+                        Связаться с нами
+                    </a>
+
                     <div class="header__socials">
                         <a href="#" class="header__social-link">
-                            <img src="img/icon__tt.png" alt="Telegram">
+                            <img src="assets/images/icon__tt.png" alt="Telegram">
                         </a>
                         <a href="#" class="header__social-link">
-                            <img src="img/icon__vk.png" alt="VK">
+                            <img src="assets/images/icon__vk.png" alt="VK">
                         </a>
                         <a href="#" class="header__social-link">
-                            <img src="img/icon__tg.png" alt="TikTok">
+                            <img src="assets/images/icon__tg.png" alt="TikTok">
                         </a>
                     </div>
                 </div>
@@ -57,12 +68,14 @@
                         <h2 class="contact-form__title">Заполните<br>контактные<br>данные</h2>
                         <button class="contact-form__close" id="closeModalBtn">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
                             </svg>
                         </button>
                     </div>
                     <p class="contact-form__description">
-                        Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!
+                        Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить
+                        тесты!
                     </p>
                     <div class="contact-form__fields">
                         <div class="contact-form__row">
@@ -77,12 +90,15 @@
                         </div>
                         <div class="contact-form__field contact-form__field--full">
                             <div class="contact-form__input-wrapper">
-                                <input type="text" class="contact-form__input" placeholder="Ваш комментарий" id="comment">
+                                <input type="text" class="contact-form__input" placeholder="Ваш комментарий"
+                                    id="comment">
                                 <button class="contact-form__attach-btn desktop-only" id="fileBtn">
                                     <span class="attach-text">Приложить файлы</span>
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 16V4M12 4L8 8M12 4L16 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                        <path d="M20 16V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M12 16V4M12 4L8 8M12 4L16 8" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path d="M20 16V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V16"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                                     </svg>
                                 </button>
                             </div>
@@ -118,55 +134,83 @@
     </div>
     <div class="mobile-menu">
         <div class="mobile-menu__content">
+
             <a href="#home" class="mobile-menu__item">
                 Главная
                 <span class="mobile-menu__arrow">></span>
             </a>
+
             <a href="#quiz" class="mobile-menu__item">
                 Квиз
                 <span class="mobile-menu__arrow">></span>
             </a>
+
             <a href="#reviews" class="mobile-menu__item">
                 Отзывы
                 <span class="mobile-menu__arrow">></span>
             </a>
+
             <a href="#other" class="mobile-menu__item">
                 Не главная
                 <span class="mobile-menu__arrow">></span>
             </a>
+
             <div class="mobile-menu__subitems">
                 <a href="#" class="mobile-menu__subitem">Подпункт</a>
                 <a href="#" class="mobile-menu__subitem">Еще подпункт</a>
             </div>
-            <a href="#" class="mobile-menu__subitem--full">И еще один подпункт</a>
+
+            <a href="#" class="mobile-menu__subitem--full">
+                И еще один подпункт
+            </a>
+
             <a href="#other2" class="mobile-menu__item">
                 Еще не главная
                 <span class="mobile-menu__arrow">></span>
             </a>
+
             <div class="mobile-menu__bottom">
                 <div class="mobile-menu__socials">
-                    <a href="#"><img src="img/icon__tt.png" alt="TikTok"></a>
-                    <a href="#"><img src="img/icon__vk.png" alt="VK"></a>
-                    <a href="#"><img src="img/icon__tg.png" alt="Telegram"></a>
+                    <a href="#">
+                        <img src="assets/images/icon__tt.png" alt="TikTok">
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/icon__vk.png" alt="VK">
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/icon__tg.png" alt="Telegram">
+                    </a>
                 </div>
-                <a href="#contact" class="mobile-menu__contact-btn">Связаться с нами</a>
+
+                <a href="#contact" class="mobile-menu__contact-btn">
+                    Связаться с нами
+                </a>
             </div>
+
         </div>
     </div>
     <main class="main">
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="container">
                 <div class="hero__content">
+
                     <h1 class="hero__title">
                         Это Супер-квиз!
                     </h1>
+
                     <p class="hero__text">
                         Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить
                         тесты!
                     </p>
-                    <a href="#" class="hero__btn">Пройти супер-квиз</a>
-                    <img src="img/hero__question.png" alt="" class="hero__img hero__img--left">
-                    <img src="img/hero__question.png" alt="" class="hero__img hero__img--right">
+
+                    <a href="#" class="hero__btn">
+                        Пройти супер-квиз
+                    </a>
+
+                    <img src="assets/images/hero__question.png" alt="" class="hero__img hero__img--left">
+
+                    <img src="assets/images/hero__question.png" alt="" class="hero__img hero__img--right">
+
                 </div>
             </div>
         </section>
@@ -310,12 +354,12 @@
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="/img/review__background1.png"
+                                    <img class="review-card__background-image" src="assets/images/review__background1"
                                         alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="/img/review__avatar1.png" alt="Андрей">
+                                        <img src="assets/images/review__avatar1" alt="Андрей">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Андрей Пархимович</div>
@@ -330,12 +374,12 @@
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="/img/review__background2.png"
+                                    <img class="review-card__background-image" src="assets/images/review__background2"
                                         alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="/img/review__avatar2.png" alt="Андрей">
+                                        <img src="assets/images/review__avatar2" alt="Андрей">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Тимур Никитенко</div>
@@ -349,12 +393,12 @@
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="/img/review__background3.png"
+                                    <img class="review-card__background-image" src="assets/images/review__background3"
                                         alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="/img/review__avatar3.png" alt="Андрей">
+                                        <img src="assets/images/review__avatar3" alt="Андрей">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Андрей Пархимович</div>
@@ -368,12 +412,12 @@
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="/img/review__background1.png"
+                                    <img class="review-card__background-image" src="assets/images/review__background1"
                                         alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="/img/review__avatar1.png" alt="Андрей">
+                                        <img src="assets/images/review__avatar1" alt="Андрей">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Андрей Пархимович</div>
@@ -386,12 +430,12 @@
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="/img/review__background2.png"
+                                    <img class="review-card__background-image" src="assets/images/review__background2"
                                         alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="/img/review__avatar2.png" alt="Тимур">
+                                        <img src="assets/images/review__avatar2" alt="Тимур">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Тимур Никитенко</div>
@@ -405,12 +449,12 @@
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="/img/review__background3.png"
+                                    <img class="review-card__background-image" src="assets/images/review__background3"
                                         alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="/img/review__avatar3.png" alt="Марина">
+                                        <img src="assets/images/review__avatar3" alt="Марина">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Артур Сидоров</div>
@@ -424,12 +468,12 @@
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="/img/review__background1.png"
+                                    <img class="review-card__background-image" src="assets/images/review__background1"
                                         alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="/img/review__avatar1.png" alt="Андрей">
+                                        <img src="assets/images/review__avatar2" alt="Андрей">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Андрей Пархимович</div>
@@ -442,12 +486,12 @@
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="/img/review__background2.png"
+                                    <img class="review-card__background-image" src="assets/images/review__background2"
                                         alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="/img/review__avatar2.png" alt="Андрей">
+                                        <img src="assets/images/review__avatar2" alt="Андрей">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Тимур Никитенко</div>
@@ -485,13 +529,13 @@
                     </div>
                     <div class="footer__socials">
                         <a href="#" class="footer__social footer__social--tt">
-                            <img src="img/icon__tt.png" alt="">
+                            <img src="assets/images/icon__tt.png" alt="">
                         </a>
                         <a href="#" class="footer__social footer__social--vk">
-                            <img src="img/icon__vk.png" alt="">
+                            <img src="assets/images/icon__vk.png" alt="">
                         </a>
                         <a href="#" class="footer__social footer__social--tg">
-                            <img src="img/icon__tg.png" alt="">
+                            <img src="assets/images/icon__tg.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -502,7 +546,8 @@
         </div>
     </footer>
     <script src="libs/swiper-12.1.2/package/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/quiz.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/quiz.js"></script>
 </body>
+
 </html>
