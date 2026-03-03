@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Project Structure</title>
+    <title>Super Quiz - Интерактивный квиз</title>
     <link rel="stylesheet" href="libs/swiper-12.1.2/package/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -60,9 +60,12 @@
             </div>
         </div>
     </header>
+
+    <!-- Модальное окно связи -->
     <div class="contact-modal" id="contactModal" style="display: none;">
         <div class="contact-modal__overlay">
             <div class="contact-modal__container">
+                <!-- Шаг 1: Форма -->
                 <div class="contact-form active" id="contactForm">
                     <div class="contact-form__header">
                         <h2 class="contact-form__title">Заполните<br>контактные<br>данные</h2>
@@ -124,51 +127,47 @@
                     </div>
                     <button class="contact-form__submit" id="submitFormBtn">Продолжить</button>
                 </div>
+
+                <!-- Шаг 2: Успех -->
                 <div class="contact-success" id="contactSuccess">
                     <div class="contact-success__emoji">😉</div>
                     <h2 class="contact-success__title">Ваши данные<br>Отправлены</h2>
-                    <button class="contact-success__btn" id="backToSiteBtn">Вернутся на сайт</button>
+                    <button class="contact-success__btn" id="backToSiteBtn">Вернуться на сайт</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Мобильное меню -->
     <div class="mobile-menu">
         <div class="mobile-menu__content">
-
             <a href="#home" class="mobile-menu__item">
                 Главная
                 <span class="mobile-menu__arrow">></span>
             </a>
-
             <a href="#quiz" class="mobile-menu__item">
                 Квиз
                 <span class="mobile-menu__arrow">></span>
             </a>
-
             <a href="#reviews" class="mobile-menu__item">
                 Отзывы
                 <span class="mobile-menu__arrow">></span>
             </a>
-
             <a href="#other" class="mobile-menu__item">
                 Не главная
                 <span class="mobile-menu__arrow">></span>
             </a>
-
             <div class="mobile-menu__subitems">
                 <a href="#" class="mobile-menu__subitem">Подпункт</a>
                 <a href="#" class="mobile-menu__subitem">Еще подпункт</a>
             </div>
-
             <a href="#" class="mobile-menu__subitem--full">
                 И еще один подпункт
             </a>
-
             <a href="#other2" class="mobile-menu__item">
                 Еще не главная
                 <span class="mobile-menu__arrow">></span>
             </a>
-
             <div class="mobile-menu__bottom">
                 <div class="mobile-menu__socials">
                     <a href="#">
@@ -181,82 +180,60 @@
                         <img src="assets/images/icon__tg.png" alt="Telegram">
                     </a>
                 </div>
-
                 <a href="#contact" class="mobile-menu__contact-btn">
                     Связаться с нами
                 </a>
             </div>
-
         </div>
     </div>
+
     <main class="main">
+        <!-- Hero секция -->
         <section class="hero" id="home">
             <div class="container">
                 <div class="hero__content">
-
                     <h1 class="hero__title">
                         Это Супер-квиз!
                     </h1>
-
                     <p class="hero__text">
                         Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить
                         тесты!
                     </p>
-
                     <a href="#" class="hero__btn">
                         Пройти супер-квиз
                     </a>
-
                     <img src="assets/images/hero__question.png" alt="" class="hero__img hero__img--left">
-
                     <img src="assets/images/hero__question.png" alt="" class="hero__img hero__img--right">
-
                 </div>
             </div>
         </section>
+
         <div class="content-container">
+            <!-- Реакции -->
             <div class="reactions">
                 <div class="reactions__item">
-                    <div class="reactions__icon">
-                        😋
-                    </div>
-                    <div class="reactions__label">
-                        Восхитительно
-                    </div>
+                    <div class="reactions__icon">😋</div>
+                    <div class="reactions__label">Восхитительно</div>
                 </div>
                 <div class="reactions__item">
-                    <div class="reactions__icon">
-                        😎
-                    </div>
-                    <div class="reactions__label">
-                        Лучше не бывает
-                    </div>
+                    <div class="reactions__icon">😎</div>
+                    <div class="reactions__label">Лучше не бывает</div>
                 </div>
                 <div class="reactions__item">
-                    <div class="reactions__icon">
-                        😍
-                    </div>
-                    <div class="reactions__label">
-                        Где еще найти?
-                    </div>
+                    <div class="reactions__icon">😍</div>
+                    <div class="reactions__label">Где еще найти?</div>
                 </div>
                 <div class="reactions__item">
-                    <div class="reactions__icon">
-                        🤩
-                    </div>
-                    <div class="reactions__label">
-                        В натуре четко!
-                    </div>
+                    <div class="reactions__icon">🤩</div>
+                    <div class="reactions__label">В натуре четко!</div>
                 </div>
                 <div class="reactions__item">
-                    <div class="reactions__icon">
-                        😍
-                    </div>
-                    <div class="reactions__label">
-                        Круто!
-                    </div>
+                    <div class="reactions__icon">😍</div>
+                    <div class="reactions__label">Круто!</div>
                 </div>
             </div>
+
+            <!-- Квиз -->
             <section class="quiz-types">
                 <div class="quiz-types__row">
                     <div class="quiz-types__history"></div>
@@ -264,6 +241,7 @@
                         <div class="quiz-types__bg-card--1"></div>
                         <div class="quiz-types__bg-card--2"></div>
                         <div class="quiz-steps">
+                            <!-- ШАГ 1 — множественный выбор -->
                             <div class="quiz-step active" data-step="0">
                                 <div class="quiz-types__card-inner">
                                     <h2 class="quiz-types__title">Какие виды тестов вам нравятся?</h2>
@@ -285,15 +263,17 @@
                                     <button type="button" class="quiz-types__next">Продолжить</button>
                                 </div>
                             </div>
+
+                            <!-- ШАГ 2 — одиночный выбор -->
                             <div class="quiz-step" data-step="1" hidden>
                                 <div class="quiz-types__card-inner">
                                     <h2 class="quiz-types__title">Вы любите проходить тесты?</h2>
                                     <p class="quiz-types__subtitle">
-                                        Нам важно узнать насолько часто Вы проходите тесты.
+                                        Нам важно узнать насколько часто Вы проходите тесты.
                                     </p>
                                     <div class="quiz-types__options">
-                                        <button type="button" class="quiz-types__option radio-select">Нет, я не никогда
-                                            не прохожу тесты</button>
+                                        <button type="button" class="quiz-types__option radio-select">Нет, я никогда не
+                                            прохожу тесты</button>
                                         <button type="button" class="quiz-types__option radio-select">Заставляю себя
                                             проходить тесты</button>
                                         <button type="button" class="quiz-types__option radio-select">Не люблю проходить
@@ -307,6 +287,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- ШАГ 3 — обратная связь -->
                             <div class="quiz-step" data-step="2" hidden>
                                 <div class="quiz-types__card-inner">
                                     <div class="quiz-types__emoji-left">
@@ -321,8 +303,7 @@
                                     <div class="quiz-types__input-line">
                                         <input type="text" class="quiz-types__input" placeholder="Ваше мнение сюда">
                                     </div>
-                                    <div class="quiz-types__select-wrapper"
-                                        style="width: auto; display: inline-block; min-width: 250px;">
+                                    <div class="quiz-types__select-wrapper">
                                         <div class="quiz-types__select-header" id="selectHeader">
                                             <span class="quiz-types__select-placeholder">Выберите вариант</span>
                                             <span class="quiz-types__select-arrow">▲</span>
@@ -348,18 +329,21 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Отзывы (слайдер) -->
             <section class="reviews">
                 <div class="swiper reviews-slider">
                     <div class="swiper-wrapper">
+                        <!-- Слайд 1 -->
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="assets/images/review__background1"
-                                        alt="">
+                                    <img class="review-card__background-image"
+                                        src="assets/images/review__background1.png" alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="assets/images/review__avatar1" alt="Андрей">
+                                        <img src="assets/images/review__avatar1.png" alt="Андрей">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Андрей Пархимович</div>
@@ -371,15 +355,16 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Слайд 2 -->
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="assets/images/review__background2"
-                                        alt="">
+                                    <img class="review-card__background-image"
+                                        src="assets/images/review__background2.png" alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="assets/images/review__avatar2" alt="Андрей">
+                                        <img src="assets/images/review__avatar2.png" alt="Андрей">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Тимур Никитенко</div>
@@ -390,15 +375,16 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Слайд 3 -->
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="assets/images/review__background3"
-                                        alt="">
+                                    <img class="review-card__background-image"
+                                        src="assets/images/review__background3.png" alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="assets/images/review__avatar3" alt="Андрей">
+                                        <img src="assets/images/review__avatar3.png" alt="Андрей">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Андрей Пархимович</div>
@@ -409,15 +395,16 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Слайд 4 -->
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="assets/images/review__background1"
-                                        alt="">
+                                    <img class="review-card__background-image"
+                                        src="assets/images/review__background1.png" alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="assets/images/review__avatar1" alt="Андрей">
+                                        <img src="assets/images/review__avatar1.png" alt="Андрей">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Андрей Пархимович</div>
@@ -427,15 +414,16 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Слайд 5 -->
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="assets/images/review__background2"
-                                        alt="">
+                                    <img class="review-card__background-image"
+                                        src="assets/images/review__background2.png" alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="assets/images/review__avatar2" alt="Тимур">
+                                        <img src="assets/images/review__avatar2.png" alt="Тимур">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Тимур Никитенко</div>
@@ -446,58 +434,22 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Слайд 6 -->
                         <div class="swiper-slide">
                             <div class="review-card">
                                 <div class="review-card__background">
-                                    <img class="review-card__background-image" src="assets/images/review__background3"
-                                        alt="">
+                                    <img class="review-card__background-image"
+                                        src="assets/images/review__background3.png" alt="">
                                 </div>
                                 <div class="review-card__footer">
                                     <div class="review-card__avatar">
-                                        <img src="assets/images/review__avatar3" alt="Марина">
+                                        <img src="assets/images/review__avatar3.png" alt="Марина">
                                     </div>
                                     <div class="review-card__content">
                                         <div class="review-card__name">Артур Сидоров</div>
                                         <div class="review-card__text">Таким образом реализация намеченных плановых
                                             заданий играет важную роль в формировании направлений прогрессивного
                                             развития.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="review-card">
-                                <div class="review-card__background">
-                                    <img class="review-card__background-image" src="assets/images/review__background1"
-                                        alt="">
-                                </div>
-                                <div class="review-card__footer">
-                                    <div class="review-card__avatar">
-                                        <img src="assets/images/review__avatar2" alt="Андрей">
-                                    </div>
-                                    <div class="review-card__content">
-                                        <div class="review-card__name">Андрей Пархимович</div>
-                                        <div class="review-card__text">В целом, конечно, постоянное
-                                            информационно-пропагандистское...</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="review-card">
-                                <div class="review-card__background">
-                                    <img class="review-card__background-image" src="assets/images/review__background2"
-                                        alt="">
-                                </div>
-                                <div class="review-card__footer">
-                                    <div class="review-card__avatar">
-                                        <img src="assets/images/review__avatar2" alt="Андрей">
-                                    </div>
-                                    <div class="review-card__content">
-                                        <div class="review-card__name">Тимур Никитенко</div>
-                                        <div class="review-card__text">Господа, глубокий уровень погружения в
-                                            значительной степени обусловливает важность глубокомысленных рассуждений.
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -509,6 +461,8 @@
             </section>
         </div>
     </main>
+
+    <!-- Футер -->
     <footer class="footer">
         <div class="container">
             <div class="footer__row">
@@ -545,6 +499,8 @@
             </div>
         </div>
     </footer>
+
+    <!-- Скрипты -->
     <script src="libs/swiper-12.1.2/package/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/quiz.js"></script>

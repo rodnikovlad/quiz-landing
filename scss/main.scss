@@ -1,15 +1,7 @@
-@use 'base/reset';
-@use 'blocks/header';
-@use 'blocks/hero.scss';
-@use 'blocks/reactions';
-@use 'blocks/quiz';
-@use 'blocks/reviews';
-@use 'blocks/footer';
-@use 'blocks/contact';
-
+// ===== FONTS =====
 @font-face {
     font-family: 'Neue Machina';
-    src: url('../fonts/NeueMachina/PPNeueMachina-Regular.otf');
+    src: url('../fonts/NeueMachina/PPNeueMachina-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -17,12 +9,47 @@
 
 @font-face {
     font-family: 'Raleway';
-    src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf');
-    font-weight: normal;
+    src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 
+// ===== IMPORTS (все ваши partials) =====
+@import 'blocks/header';
+@import 'blocks/hero';
+@import 'blocks/reactions';
+@import 'blocks/quiz';
+@import 'blocks/reviews';
+@import 'blocks/footer';
+@import 'blocks/contact';
+@import 'base/reset';
+
+// ===== GLOBAL =====
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 70px;
+    
+    @media (max-width: 768px) {
+        padding: 0 20px;
+    }
+}
+
+/* Контейнер для контента после hero */
 .content-container {
     width: 100%;
     
@@ -30,8 +57,4 @@
         width: 75%;
         margin: 0 auto;
     }
-}
-
-.hero__btn:hover {
-    background-color: #9E00FF;
 }
